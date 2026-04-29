@@ -1291,8 +1291,25 @@ form { display: flex; flex-direction: column; gap: 16px; }
   letter-spacing: .02em;
 }
 .svc-breadcrumb:hover { color: #fff; }
-.svc-breadcrumb--dark { color: rgba(15,15,15,.70); }
-.svc-breadcrumb--dark:hover { color: var(--dark); }
+.svc-breadcrumb--dark {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 90;
+  background: rgba(255,255,255,.90);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 10px 20px;
+  color: var(--dark);
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+}
+.svc-breadcrumb--dark:hover {
+  background: #fff;
+  color: var(--orange);
+  box-shadow: 0 6px 20px rgba(0,0,0,.16);
+}
 
 /* Service wordmark SVG */
 .svc-wordmark {
@@ -1643,7 +1660,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 .svc-page-wordmark {
   width: 100%;
-  max-width: 540px;
+  max-width: 260px;
   height: auto;
 }
 .svc-page-accent {
