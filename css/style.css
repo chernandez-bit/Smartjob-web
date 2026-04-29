@@ -1028,40 +1028,62 @@ form { display: flex; flex-direction: column; gap: 16px; }
 .chip:hover span { border-color: var(--orange); }
 
 /* ══════════════════════════════════════════════════════════
-   FOOTER V2 — HTML/CSS (reemplaza sistema de overlay PNG)
+   FOOTER V2 — replica fiel del PNG footer-full.png
 ══════════════════════════════════════════════════════════ */
 .footer-v2 {
   background: #EFEFEF;
   font-family: 'Host Grotesk', sans-serif;
 }
 
-/* Top bar: logo + CTA + email */
-.fv2-top {
-  padding: 28px 0;
-}
+/* ── Top bar: logo-block izquierda | acciones derecha ── */
+.fv2-top { padding: 24px 0 20px; }
 .fv2-top-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
-.fv2-logo-link { display: flex; align-items: center; flex-shrink: 0; }
-.fv2-logo-img  { height: 60px; width: auto; }
 
+/* Logo + tagline */
+.fv2-logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.fv2-logo-link { display: flex; align-items: center; }
+.fv2-logo-img  { height: 34px; width: auto; }
+
+.fv2-tagline1 {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+.fv2-tagline2 {
+  font-size: 10.5px;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+/* Contáctanos + email form */
 .fv2-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 .fv2-btn-contacta {
   display: inline-flex;
   align-items: center;
-  padding: 12px 28px;
+  padding: 11px 26px;
   background: var(--orange);
   color: #fff;
   font-family: 'Host Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 100px;
   white-space: nowrap;
   transition: background .2s;
@@ -1072,10 +1094,10 @@ form { display: flex; flex-direction: column; gap: 16px; }
   display: flex;
   align-items: center;
   background: #fff;
-  border: 1.5px solid #D0D0D0;
+  border: 1.5px solid #C8C8C8;
   border-radius: 100px;
-  height: 48px;
-  padding-left: 20px;
+  height: 44px;
+  padding-left: 18px;
   overflow: hidden;
 }
 .fv2-email-form input {
@@ -1083,14 +1105,14 @@ form { display: flex; flex-direction: column; gap: 16px; }
   outline: none;
   background: transparent;
   font-family: 'Host Grotesk', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--dark);
-  width: 220px;
+  width: 210px;
 }
-.fv2-email-form input::placeholder { color: #999; }
+.fv2-email-form input::placeholder { color: #ABABAB; }
 .fv2-email-form button {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   background: var(--teal);
   border: none;
@@ -1104,63 +1126,66 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 .fv2-email-form button:hover { background: #159588; }
 
-/* Divider */
+/* ── Divider ── */
 .fv2-divider {
   height: 1px;
-  background: #D0D0D0;
+  background: #C8C8C8;
   margin: 0 52px;
 }
 
-/* Bottom grid: nav | social | offices */
+/* ── Bottom: nav | síguenos | oficinas ── */
 .fv2-bottom {
   display: grid;
-  grid-template-columns: 200px 140px 1fr;
-  gap: 48px;
-  padding: 40px 0;
+  grid-template-columns: 220px 160px 1fr;
+  gap: 40px;
+  padding: 32px 0 36px;
   align-items: start;
 }
 
 .fv2-nav {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 .fv2-nav a {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--dark);
   transition: color .2s;
 }
 .fv2-nav a:hover { color: var(--orange); }
 
+/* Síguenos + iconos */
 .fv2-social {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .fv2-siguenos {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--dark);
-  margin-bottom: 2px;
 }
 .fv2-social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: var(--orange);
   color: #fff;
   transition: background .2s, transform .2s;
+  flex-shrink: 0;
 }
 .fv2-social-btn:hover { background: #D1830A; transform: scale(1.06); }
 
+/* Oficinas */
 .fv2-offices {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 .fv2-office {
   display: flex;
@@ -1168,22 +1193,15 @@ form { display: flex; flex-direction: column; gap: 16px; }
   align-items: center;
   gap: 8px;
   text-align: center;
-  max-width: 160px;
+  min-width: 140px;
 }
-.fv2-flag   { width: 52px; height: auto; }
-.fv2-phone  { font-size: 14px; font-weight: 700; color: var(--dark); }
-.fv2-addr   { font-size: 13px; font-weight: 400; color: var(--muted); line-height: 1.5; }
+.fv2-flag  { width: 50px; height: auto; }
+.fv2-phone { font-size: 13px; font-weight: 700; color: var(--dark); }
+.fv2-addr  { font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.55; }
 
-/* Copyright */
-.fv2-copy {
-  border-top: 1px solid #D0D0D0;
-  padding: 16px 0;
-}
-.fv2-copy p {
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}
+/* ── Copyright ── */
+.fv2-copy { border-top: 1px solid #C8C8C8; padding: 14px 0; }
+.fv2-copy p { text-align: center; font-size: 11px; color: #ABABAB; }
 
 /* ══════════════════════════════════════════════════════════
    SERVICE DETAIL PAGES (smart-staffing.html / smart-cloud.html)
@@ -1714,18 +1732,22 @@ form { display: flex; flex-direction: column; gap: 16px; }
 /* ══════════════════════════════════════════════════════════
    FOOTER V2 — Responsive
 ══════════════════════════════════════════════════════════ */
-@media (max-width: 900px) {
-  .fv2-offices { gap: 16px; }
-  .fv2-office  { max-width: 130px; }
+@media (max-width: 1024px) {
+  .fv2-offices { gap: 12px; }
+  .fv2-office  { min-width: 120px; }
+  .fv2-email-form input { width: 170px; }
 }
 @media (max-width: 768px) {
-  .fv2-top-inner    { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .fv2-email-form input { width: 150px; }
-  .fv2-divider      { margin: 0 20px; }
-  .fv2-bottom       { grid-template-columns: 1fr; gap: 28px; padding: 28px 0; }
-  .fv2-offices      { flex-direction: column; align-items: flex-start; gap: 20px; }
-  .fv2-office       { align-items: flex-start; text-align: left; flex-direction: row; gap: 12px; max-width: 100%; }
-  .fv2-office > div { display: flex; flex-direction: column; gap: 2px; }
+  .fv2-top-inner        { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .fv2-email-form input { width: 140px; }
+  .fv2-divider          { margin: 0 20px; }
+  .fv2-bottom           { grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px 0 28px; }
+  .fv2-offices          { grid-column: 1 / -1; justify-content: flex-start; flex-wrap: wrap; gap: 20px; }
+}
+@media (max-width: 480px) {
+  .fv2-actions          { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .fv2-bottom           { grid-template-columns: 1fr; }
+  .fv2-offices          { gap: 20px; }
 }
 
 /* Responsive */
