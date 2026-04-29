@@ -1482,6 +1482,42 @@ form { display: flex; flex-direction: column; gap: 16px; }
   font-weight: 500;
 }
 
+/* Benefit image grid (staffing / cloud detail pages) */
+.benefit-img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 48px;
+}
+.benefit-img-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.benefit-img-item img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+.benefit-img-title {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 1.4;
+  max-width: 200px;
+}
+
+/* White CTA card variant (smart-cloud.html) */
+.conectemos-card--white {
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,.10);
+}
+.conectemos-card--white .conectemos-h2 { color: var(--dark); }
+.conectemos-card--white .conectemos-sub { color: var(--muted); }
+
 /* ══════════════════════════════════════════════════════════
    SCROLL REVEAL
 ══════════════════════════════════════════════════════════ */
@@ -1498,10 +1534,11 @@ form { display: flex; flex-direction: column; gap: 16px; }
    RESPONSIVE
 ══════════════════════════════════════════════════════════ */
 @media (max-width: 1200px) {
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-  .cloud-grid    { grid-template-columns: repeat(3, 1fr); }
-  .process-steps { flex-wrap: wrap; justify-content: center; }
-  .process-arrow { display: none; }
+  .benefits-grid    { grid-template-columns: repeat(2, 1fr); }
+  .benefit-img-grid { grid-template-columns: repeat(2, 1fr); }
+  .cloud-grid       { grid-template-columns: repeat(3, 1fr); }
+  .process-steps    { flex-wrap: wrap; justify-content: center; }
+  .process-arrow    { display: none; }
 }
 
 @media (max-width: 1100px) {
@@ -1584,7 +1621,8 @@ form { display: flex; flex-direction: column; gap: 16px; }
   .stats-grid    { grid-template-columns: 1fr; }
   .field-row     { grid-template-columns: 1fr; }
   .cards-grid    { grid-template-columns: 1fr; max-width: 100%; }
-  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-grid    { grid-template-columns: 1fr; }
+  .benefit-img-grid { grid-template-columns: 1fr; }
   .smarter-page, .contacto-page { padding-block: 100px 48px; }
   .section-title { font-size: 26px; }
   .conectemos-card { padding: 32px 20px; }
@@ -1739,16 +1777,13 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 
 @media (max-width: 768px) {
-  /* Top: logo arriba, acciones abajo (columna) */
+  /* Top: logo arriba, acciones abajo en una sola fila */
   .fv2-top-inner  { flex-direction: column; align-items: stretch; gap: 16px; }
-  .fv2-actions    { flex-direction: column; align-items: stretch; gap: 10px; }
+  .fv2-actions    { flex-direction: row; align-items: center; flex-wrap: nowrap; gap: 8px; }
 
-  /* Botón contáctanos: ancho completo */
-  .fv2-btn-contacta { justify-content: center; }
-
-  /* Email form: input se estira, botón queda a la derecha */
-  .fv2-email-form       { width: 100%; }
-  .fv2-email-form input { flex: 1; width: auto; min-width: 0; height: 44px; }
+  /* Email form: ocupa el espacio restante, input se estira */
+  .fv2-email-form       { flex: 1; min-width: 0; }
+  .fv2-email-form input { flex: 1; width: auto; min-width: 0; }
 
   /* Divisor */
   .fv2-divider { margin: 0 20px; }
