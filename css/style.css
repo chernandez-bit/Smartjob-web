@@ -1894,6 +1894,27 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 
 /* ── Tech logo grid ── */
+/* ── Tech section — stroke vector background ── */
+.tech-section {
+  position: relative;
+  overflow: hidden;
+}
+.tech-stroke-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
+.tech-section .container {
+  position: relative;
+  z-index: 1;
+}
+
 .tech-logo-grid {
   display: flex;
   flex-wrap: wrap;
