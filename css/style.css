@@ -1497,8 +1497,6 @@ form { display: flex; flex-direction: column; gap: 16px; }
   .partners-card { flex-direction: column; min-height: unset; }
   .partners-left { flex: none; }
   .partners-right { flex-direction: row; }
-  .footer-bottom { grid-template-columns: 1fr 1fr; }
-  .footer-offices { flex-direction: column; gap: 20px; }
   .svc-detail { grid-template-columns: 1fr; gap: 40px; }
   .svc-detail--reverse .svc-detail__text,
   .svc-detail--reverse .svc-detail__visual { order: unset; }
@@ -1516,7 +1514,6 @@ form { display: flex; flex-direction: column; gap: 16px; }
 
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .conectemos-card { flex-direction: column; text-align: center; padding: 40px 28px; }
-  .footer-top { flex-direction: column; align-items: flex-start; }
   .smarter-card { padding: 28px 24px; }
 }
 
@@ -1551,10 +1548,6 @@ form { display: flex; flex-direction: column; gap: 16px; }
   .partners-left { padding: 40px 24px; }
   .partners-right { flex-direction: row; flex-wrap: wrap; justify-content: center; }
 
-  /* Footer: hide image overlay, show html footer */
-  .footer-asset-wrap { display: none; }
-  .footer-html { display: flex; }
-
   /* Svc hero pages (staffing / cloud) — fondo color visible */
   .svc-hero { padding-top: 90px; padding-bottom: 40px; }
   .svc-hero-inner--white { padding: 28px 20px; }
@@ -1572,7 +1565,6 @@ form { display: flex; flex-direction: column; gap: 16px; }
 @media (max-width: 480px) {
   .stats-grid    { grid-template-columns: 1fr; }
   .field-row     { grid-template-columns: 1fr; }
-  .footer-offices { flex-direction: column; }
   .cards-grid    { grid-template-columns: 1fr; max-width: 100%; }
   .benefits-grid { grid-template-columns: 1fr; }
   .smarter-page, .contacto-page { padding-block: 100px 48px; }
