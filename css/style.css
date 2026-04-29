@@ -1291,25 +1291,8 @@ form { display: flex; flex-direction: column; gap: 16px; }
   letter-spacing: .02em;
 }
 .svc-breadcrumb:hover { color: #fff; }
-.svc-breadcrumb--dark {
-  position: fixed;
-  bottom: 28px;
-  left: 28px;
-  z-index: 90;
-  background: rgba(255,255,255,.90);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  padding: 10px 20px;
-  color: var(--dark);
-  box-shadow: 0 4px 16px rgba(0,0,0,.12);
-}
-.svc-breadcrumb--dark:hover {
-  background: #fff;
-  color: var(--orange);
-  box-shadow: 0 6px 20px rgba(0,0,0,.16);
-}
+.svc-breadcrumb--dark { color: var(--dark); opacity: .65; }
+.svc-breadcrumb--dark:hover { opacity: 1; color: var(--orange); }
 
 /* Service wordmark SVG */
 .svc-wordmark {
@@ -1606,20 +1589,29 @@ form { display: flex; flex-direction: column; gap: 16px; }
 .conectemos-card--white .conectemos-h2 { color: var(--dark); }
 .conectemos-card--white .conectemos-sub { color: var(--muted); }
 
-/* ── White-bg page hero (staffing / cloud) — white bg, card shape on right ── */
+/* ── White-bg page hero (staffing / cloud) — white bg, wave separator at bottom ── */
 .svc-page-hero {
   position: relative;
-  min-height: 680px;
-  padding-top: 130px;
-  padding-bottom: 60px;
   background: #fff;
   overflow: hidden;
+}
+.svc-hero-topbar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 36px;
 }
 .svc-page-wave {
   display: block;
   width: 100%;
   height: auto;
   pointer-events: none;
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
 }
 .svc-page-card-bg {
   position: absolute;
