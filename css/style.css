@@ -1092,6 +1092,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
 
 .fv2-email-form {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
 }
@@ -1482,6 +1483,51 @@ form { display: flex; flex-direction: column; gap: 16px; }
   font-weight: 500;
 }
 
+/* ── CTA strip (staffing / cloud) — imagen full-width + botón overlay ── */
+.svc-cta-strip {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.svc-cta-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.svc-cta-btn {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--teal);
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 32px;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+}
+.svc-cta-btn:hover { transform: translateY(calc(-50% - 2px)); box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.svc-cta-btn--orange { color: var(--orange); }
+
+/* Benefits section image (reemplaza el grid) */
+.svc-benefits-section { padding-block: 60px; }
+.svc-benefits-img {
+  display: block;
+  width: 100%;
+  max-width: 1209px;
+  height: auto;
+  margin-inline: auto;
+  border-radius: 24px;
+}
+
 /* Benefit image grid (staffing / cloud detail pages) */
 .benefit-img-grid {
   display: grid;
@@ -1826,4 +1872,10 @@ form { display: flex; flex-direction: column; gap: 16px; }
   .tech-logo-pill { height: 60px; }
   .tech-pill      { height: 60px; padding: 0 16px; }
   .tech-pill img  { height: 34px; }
+  .svc-cta-btn    { font-size: 13px; padding: 10px 22px; right: 4%; }
+}
+
+@media (max-width: 600px) {
+  .svc-cta-btn { font-size: 11px; padding: 8px 16px; right: 3%; }
+  .svc-benefits-img { border-radius: 14px; }
 }
