@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Se Smarter — Trabaja con Smartjob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-smartjob.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <header class="nav-wrapper">
+    <nav class="nav-pill scrolled" id="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo-smartjob.svg" alt="SmartJob" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#quienes" class="nav-a">Quiénes somos</a></li>
+        <li><a href="servicios.html"       class="nav-a">Nuestros Servicios</a></li>
+        <li><a href="se-smarter.html"     class="nav-a fw-700 c-orange">Se Smarter</a></li>
+        <li><a href="contacto.html"        class="nav-a">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-orange">Contáctanos</a>
+      <button class="hamburger" id="menu-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html#quienes"  class="mobile-a">Quiénes somos</a>
+    <a href="servicios.html"       class="mobile-a">Nuestros Servicios</a>
+    <a href="se-smarter.html"     class="mobile-a c-orange fw-700">Se Smarter</a>
+    <a href="contacto.html"        class="mobile-a">Contacto</a>
+    <a href="contacto.html"        class="btn-orange">Contáctanos</a>
+  </div>
+
+  <!-- ══ SE SMARTER MAIN ══════════════════════════════════════
+       Figma: 188:73 — Se Smarter (1440×1265)
+       Fondo blanco + wave decoration
+       Card centrada: x=255, y=216, w=932, h=548
+       bg: rgba(248,248,248,0.8), border-radius: 30px
+  ═══════════════════════════════════════════════════════════ -->
+  <main class="smarter-page">
+    <!-- Wave decoration (misma que hero, posicionada diferente) -->
+    <img src="assets/img/hero-deco-orange.png" class="smarter-wave smarter-wave--orange" alt="" aria-hidden="true" />
+    <img src="assets/img/hero-deco-teal.png"   class="smarter-wave smarter-wave--teal"   alt="" aria-hidden="true" />
+
+    <div class="smarter-inner container">
+
+      <!-- Título principal: Host Grotesk Bold 700 48px, x=491, y=246 -->
+      <h1 class="smarter-title reveal">Trabaja con nosotros</h1>
+      <!-- Divider orange: Vector 1 at y=316 -->
+      <div class="smarter-rule reveal"></div>
+      <!-- Subtitle: Host Grotesk Medium 500 24px centered, x=451, y=326 -->
+      <p class="smarter-sub reveal">
+        Buscamos talento que quiera crecer, aprender y ser parte de proyectos reales.
+      </p>
+
+      <!-- Glass card: x=255, y=216, w=932, h=548
+           fill: rgba(248,248,248,0.8), r=30px, shadow=0 4px 4px rgba(0,0,0,0.25) -->
+      <div class="smarter-card reveal">
+        <form id="smarter-form">
+
+          <!-- Input 1: Especialidad — y=423, w=634, h=64 -->
+          <div class="smarter-field">
+            <label class="smarter-label">
+              <span class="c-orange fw-700">Especialidad</span> (Java, Node JS, Angular, etc):
+            </label>
+            <input type="text" class="smarter-input" placeholder="Ej: React JS, Python, Cloud…" />
+          </div>
+
+          <!-- Input 2: Correo — y=503, w=634, h=64 -->
+          <div class="smarter-field">
+            <label class="smarter-label">Correo</label>
+            <input type="email" class="smarter-input" placeholder="tu@email.com" />
+          </div>
+
+          <!-- Input 3: Adjunta tu CV — y=583, w=634, h=64 -->
+          <div class="smarter-field">
+            <label class="smarter-label c-orange fw-700">Adjunta tu CV</label>
+            <label class="smarter-file-label">
+              <input type="file" accept=".pdf,.doc,.docx" class="smarter-file" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span class="smarter-file-text">Selecciona tu archivo PDF o Word</span>
+            </label>
+          </div>
+
+          <!-- Enviar: x=620, y=682, w=200, h=45 — orange button -->
+          <button type="submit" class="btn-orange smarter-submit">Enviar</button>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-asset-wrap">
+      <img src="assets/img/footer-full.png" class="footer-asset-img" alt="" aria-hidden="true" />
+
+      <!-- Botón Contáctanos -->
+      <a href="contacto.html" class="footer-ov footer-ov-contacta" aria-label="Contáctanos"></a>
+
+      <!-- Formulario email -->
+      <form class="footer-ov footer-ov-form" id="newsletter-form">
+        <input type="email" class="footer-ov-input" placeholder="Ingresa tu email" />
+        <button type="submit" class="footer-ov-submit" aria-label="Suscribir"></button>
+      </form>
+
+      <!-- Links de navegación -->
+      <a href="index.html#quienes" class="footer-ov footer-ov-link footer-ov-link-1">Quiénes somos</a>
+      <a href="servicios.html"     class="footer-ov footer-ov-link footer-ov-link-2">Nuestros Servicios</a>
+      <a href="se-smarter.html"    class="footer-ov footer-ov-link footer-ov-link-3">Se Smarter</a>
+      <a href="contacto.html"      class="footer-ov footer-ov-link footer-ov-link-4">Contacto</a>
+
+      <!-- Redes sociales -->
+      <a href="#" class="footer-ov footer-ov-ig" aria-label="Instagram"></a>
+      <a href="#" class="footer-ov footer-ov-li" aria-label="LinkedIn"></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

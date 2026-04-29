@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Smartjob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-smartjob.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <header class="nav-wrapper">
+    <nav class="nav-pill scrolled" id="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo-smartjob.svg" alt="SmartJob" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#quienes" class="nav-a">Quiénes somos</a></li>
+        <li><a href="servicios.html"       class="nav-a">Nuestros Servicios</a></li>
+        <li><a href="se-smarter.html"     class="nav-a">Se Smarter</a></li>
+        <li><a href="contacto.html"        class="nav-a fw-700 c-orange">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-orange">Contáctanos</a>
+      <button class="hamburger" id="menu-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html#quienes"  class="mobile-a">Quiénes somos</a>
+    <a href="servicios.html"       class="mobile-a">Nuestros Servicios</a>
+    <a href="se-smarter.html"     class="mobile-a">Se Smarter</a>
+    <a href="contacto.html"        class="mobile-a c-orange fw-700">Contacto</a>
+    <a href="contacto.html"        class="btn-orange">Contáctanos</a>
+  </div>
+
+  <!-- ══ CONTACTO MAIN ════════════════════════════════════════
+       Figma: 188:75 — Contacto (1440×1370)
+       Two-column: left info + right form
+  ═══════════════════════════════════════════════════════════ -->
+  <main class="contacto-page">
+    <img src="assets/img/hero-deco-teal.png" class="contacto-wave contacto-wave--teal" alt="" aria-hidden="true" />
+
+    <div class="contacto-inner container">
+      <div class="contacto-grid">
+
+        <!-- Columna izquierda: título + datos -->
+        <div class="contacto-left">
+          <h1 class="section-title reveal">
+            CONVERSEMOS<br>SOBRE TU<br>PRÓXIMO<br>DESAFÍO.
+          </h1>
+          <div class="orange-rule reveal"></div>
+          <p class="body-text reveal">
+            Transformemos tus desafíos en soluciones concretas.
+            ¿Buscas talento o potenciar tu infraestructura? Hablemos.
+          </p>
+
+          <div class="contact-info-cards reveal">
+            <div class="contact-info-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="#F99C08" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="contact-card-text">+56 9 5768 9050</span>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" stroke="#F99C08" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="contact-card-text">Cerro el Plomo 5855,<br>oficina 907 A, Las Condes.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha: formulario -->
+        <div class="contacto-form-wrap reveal">
+          <div class="form-card">
+            <form id="contact-form">
+
+              <div class="field-row">
+                <div class="field">
+                  <label class="label">Nombre</label>
+                  <input type="text" class="input" placeholder="Tu nombre" />
+                </div>
+                <div class="field">
+                  <label class="label">Número</label>
+                  <input type="tel" class="input" placeholder="+56 9 XXXX XXXX" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Correo electrónico</label>
+                <input type="email" class="input" placeholder="tu@empresa.com" />
+              </div>
+
+              <div class="field">
+                <label class="label">¿En qué podemos ayudarte?</label>
+                <div class="checkbox-grid">
+                  <label class="chip"><input type="checkbox" hidden /><span>Migración Cloud</span></label>
+                  <label class="chip"><input type="checkbox" hidden /><span>Automatización</span></label>
+                  <label class="chip"><input type="checkbox" hidden /><span>Desarrollo</span></label>
+                  <label class="chip"><input type="checkbox" hidden /><span>Staffing</span></label>
+                  <label class="chip"><input type="checkbox" hidden /><span>Consultoría TI</span></label>
+                  <label class="chip"><input type="checkbox" hidden /><span>Otro</span></label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Mensaje</label>
+                <textarea class="input textarea" placeholder="Cuéntanos sobre tu proyecto…"></textarea>
+              </div>
+
+              <button type="submit" class="btn-orange btn-full">Enviar mensaje</button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-asset-wrap">
+      <img src="assets/img/footer-full.png" class="footer-asset-img" alt="" aria-hidden="true" />
+
+      <!-- Botón Contáctanos -->
+      <a href="contacto.html" class="footer-ov footer-ov-contacta" aria-label="Contáctanos"></a>
+
+      <!-- Formulario email -->
+      <form class="footer-ov footer-ov-form" id="newsletter-form">
+        <input type="email" class="footer-ov-input" placeholder="Ingresa tu email" />
+        <button type="submit" class="footer-ov-submit" aria-label="Suscribir"></button>
+      </form>
+
+      <!-- Links de navegación -->
+      <a href="index.html#quienes" class="footer-ov footer-ov-link footer-ov-link-1">Quiénes somos</a>
+      <a href="servicios.html"     class="footer-ov footer-ov-link footer-ov-link-2">Nuestros Servicios</a>
+      <a href="se-smarter.html"    class="footer-ov footer-ov-link footer-ov-link-3">Se Smarter</a>
+      <a href="contacto.html"      class="footer-ov footer-ov-link footer-ov-link-4">Contacto</a>
+
+      <!-- Redes sociales -->
+      <a href="#" class="footer-ov footer-ov-ig" aria-label="Instagram"></a>
+      <a href="#" class="footer-ov footer-ov-li" aria-label="LinkedIn"></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

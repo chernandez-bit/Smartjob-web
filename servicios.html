@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestros Servicios — Smartjob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-smartjob.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <header class="nav-wrapper">
+    <nav class="nav-pill scrolled" id="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo-smartjob.svg" alt="SmartJob" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#quienes" class="nav-a">Quiénes somos</a></li>
+        <li><a href="servicios.html" class="nav-a fw-700 c-orange">Nuestros Servicios</a></li>
+        <li><a href="se-smarter.html" class="nav-a">Se Smarter</a></li>
+        <li><a href="contacto.html" class="nav-a">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-orange">Contáctanos</a>
+      <button class="hamburger" id="menu-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html#quienes"  class="mobile-a">Quiénes somos</a>
+    <a href="servicios.html"       class="mobile-a c-orange fw-700">Nuestros Servicios</a>
+    <a href="se-smarter.html"     class="mobile-a">Se Smarter</a>
+    <a href="contacto.html"        class="mobile-a">Contacto</a>
+    <a href="contacto.html"        class="btn-orange">Contáctanos</a>
+  </div>
+
+  <!-- ══ PAGE HERO ══ -->
+  <section class="page-hero">
+    <img src="assets/img/hero-deco-orange.png" class="page-hero-wave page-hero-wave--orange" alt="" aria-hidden="true" />
+    <img src="assets/img/hero-deco-teal.png"   class="page-hero-wave page-hero-wave--teal"   alt="" aria-hidden="true" />
+    <div class="page-hero-content container reveal">
+      <div class="hero-rule"></div>
+      <h1 class="hero-h1">Soluciones en <span class="c-orange">tecnología,</span><br><span class="c-orange">IA</span> y talento</h1>
+      <p class="hero-sub">Integramos capacidades para acompañarte en cada desafío: desde la incorporación de talento hasta el desarrollo de software y la transformación cloud.</p>
+    </div>
+  </section>
+
+
+  <!-- ══ CARDS DE SERVICIOS ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-cards-stack">
+
+        <!-- Smart Staffing — orange -->
+        <div class="svc-hcard reveal">
+          <div class="svc-hcard__left">
+            <img src="assets/img/smart-staffing.svg" alt="Smart Staffing" class="svc-hcard__wordmark" />
+            <img src="assets/img/staffing.png" alt="Smart Staffing icon" class="svc-hcard__icon" />
+          </div>
+          <div class="svc-hcard__right svc-hcard__right--orange">
+            <p class="svc-hcard__text">Incorpora talento TI especializado de forma ágil y flexible para escalar tu equipo según la demanda de tus proyectos.</p>
+            <a href="smart-staffing.html" class="svc-hcard__btn">Conoce más</a>
+          </div>
+        </div>
+
+        <!-- Smart Forge — teal -->
+        <div class="svc-hcard reveal">
+          <div class="svc-hcard__left">
+            <img src="assets/img/smart-forge.svg" alt="Smart Forge" class="svc-hcard__wordmark" />
+            <img src="assets/img/forgecyan.png" alt="Smart Forge icon" class="svc-hcard__icon" />
+          </div>
+          <div class="svc-hcard__right svc-hcard__right--teal">
+            <p class="svc-hcard__text">Acelera el desarrollo de software con inteligencia artificial y equipos expertos, mejorando tiempos, calidad y eficiencia.</p>
+            <a href="contacto.html" class="svc-hcard__btn">Conoce más</a>
+          </div>
+        </div>
+
+        <!-- Smart Cloud — orange -->
+        <div class="svc-hcard reveal">
+          <div class="svc-hcard__left">
+            <img src="assets/img/smart-cloud.svg" alt="Smart Cloud" class="svc-hcard__wordmark" />
+            <img src="assets/img/cloud.png" alt="Smart Cloud icon" class="svc-hcard__icon" />
+          </div>
+          <div class="svc-hcard__right svc-hcard__right--orange">
+            <p class="svc-hcard__text">Transforma tu infraestructura con soluciones cloud seguras y escalables, optimizando costos y rendimiento.</p>
+            <a href="smart-cloud.html" class="svc-hcard__btn">Conoce más</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ NUESTRO ENTORNO TECNOLÓGICO ══ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal">NUESTRO ENTORNO <span class="c-orange">TECNOLÓGICO</span></h2>
+      <div class="orange-rule reveal"></div>
+      <p class="body-text reveal" style="max-width:680px;margin-top:8px">
+        Operamos de manera global con equipos distribuidos que dominan las principales
+        plataformas y herramientas del mercado.
+      </p>
+
+      <div class="tech-logo-grid reveal">
+
+        <!-- Pre-rendered Figma composites (orange bg baked in) -->
+        <img src="assets/img/tech/tech-group-21.png" alt="Node.js"    class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-js.png"        alt="JavaScript" class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-group-22.png" alt="Python"     class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-group-27.png" alt="Spring"     class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-group-26.png" alt="Rails"      class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-java.png"      alt="Java"       class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-group-30.png" alt="Salesforce" class="tech-logo-pill" />
+        <img src="assets/img/tech/tech-group-25.png" alt="Kotlin"     class="tech-logo-pill" />
+
+        <!-- White logos on CSS orange pill -->
+        <div class="tech-pill"><img src="assets/img/Logos/react-original.png"           alt="React" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/vuejs-plain-wordmark.png"     alt="Vue.js" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/jquery-original-wordmark.png" alt="jQuery" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/css3-plain-wordmark.png"      alt="CSS3" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/figma-plain.png"              alt="Figma" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/mysql-original-wordmark.png"  alt="MySQL" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/postgresql-plain-wordmark.png" alt="PostgreSQL" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/mongodb-plain-wordmark.png"   alt="MongoDB" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/kubernetes-plain-wordmark.png" alt="Kubernetes" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/jenkins-plain.png"            alt="Jenkins" /></div>
+        <div class="tech-pill"><img src="assets/img/Logos/git-plain-wordmark.png"       alt="Git" /></div>
+
+        <!-- Group composites (white on transparent) -->
+        <div class="tech-pill"><img src="assets/img/Group 28.png" alt="AWS" /></div>
+        <div class="tech-pill"><img src="assets/img/Group 29.png" alt="Azure" /></div>
+        <div class="tech-pill"><img src="assets/img/Group 32.png" alt="GCP" /></div>
+
+        <!-- SAP — colored composite, display directly -->
+        <img src="assets/img/Group 31.png" alt="SAP" class="tech-logo-pill" />
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CTA ══ -->
+  <section class="section section--conectemos">
+    <div class="container">
+      <div class="conectemos-card reveal">
+        <img src="assets/img/elements-1.png" alt="" class="conectemos-icon" aria-hidden="true" />
+        <div>
+          <h2 class="conectemos-h2">¿Listo para llevar tu empresa<br>al siguiente nivel?</h2>
+          <p class="conectemos-sub">Conversemos sobre tu próximo desafío tecnológico.</p>
+        </div>
+        <a href="contacto.html" class="btn-orange-outline">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-asset-wrap">
+      <img src="assets/img/footer-full.png" class="footer-asset-img" alt="" aria-hidden="true" />
+
+      <!-- Botón Contáctanos -->
+      <a href="contacto.html" class="footer-ov footer-ov-contacta" aria-label="Contáctanos"></a>
+
+      <!-- Formulario email -->
+      <form class="footer-ov footer-ov-form" id="newsletter-form">
+        <input type="email" class="footer-ov-input" placeholder="Ingresa tu email" />
+        <button type="submit" class="footer-ov-submit" aria-label="Suscribir"></button>
+      </form>
+
+      <!-- Links de navegación -->
+      <a href="index.html#quienes" class="footer-ov footer-ov-link footer-ov-link-1">Quiénes somos</a>
+      <a href="servicios.html"     class="footer-ov footer-ov-link footer-ov-link-2">Nuestros Servicios</a>
+      <a href="se-smarter.html"    class="footer-ov footer-ov-link footer-ov-link-3">Se Smarter</a>
+      <a href="contacto.html"      class="footer-ov footer-ov-link footer-ov-link-4">Contacto</a>
+
+      <!-- Redes sociales -->
+      <a href="#" class="footer-ov footer-ov-ig" aria-label="Instagram"></a>
+      <a href="#" class="footer-ov footer-ov-li" aria-label="LinkedIn"></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
