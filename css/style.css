@@ -1960,6 +1960,10 @@ form { display: flex; flex-direction: column; gap: 16px; }
 .tech-pill--sap img {
   height: 36px;
 }
+.tech-pill--baked img {
+  filter: none;
+  object-fit: contain;
+}
 
 /* ── Process icon (smart-cloud.html / smart-staffing.html) ── */
 .process-icon {
