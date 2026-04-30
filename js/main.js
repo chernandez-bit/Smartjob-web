@@ -86,26 +86,115 @@ sections.forEach(s => activeObs.observe(s));
   if (cb) cb.checked = true;
 })();
 
-/* ─── Form feedback ─── */
-['smarter-form', 'contact-form', 'newsletter-form'].forEach(id => {
-  const form = document.getElementById(id);
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    if (!btn) return;
-    const orig = btn.textContent;
-    btn.textContent = '✓ Enviado';
-    btn.disabled = true;
-    btn.style.background = '#1BB9A5';
+/* ─── Webhook forms ─── */
+const WEBHOOK_URL = 'https://smartjob.app.n8n.cloud/webhook/contact-form';
+
+async function postToWebhook(payload, btn, form) {
+  const orig = btn.textContent;
+  btn.textContent = 'Enviando…';
+  btn.disabled = true;
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    const ok = Array.isArray(data) ? data[0]?.success === true : data?.success === true;
+    if (ok) {
+      btn.textContent = '✓ Enviado';
+      btn.style.background = '#1BB9A5';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+        form.reset();
+      }, 3000);
+    } else {
+      throw new Error('success false');
+    }
+  } catch {
+    btn.textContent = 'Error, reintenta';
+    btn.style.background = '#e74c3c';
     setTimeout(() => {
       btn.textContent = orig;
       btn.disabled = false;
       btn.style.background = '';
-      form.reset();
+    }, 3000);
+  }
+}
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const fd = new FormData(contactForm);
+    const categories = [...contactForm.querySelectorAll('input[name="categories"]:checked')]
+      .map(cb => cb.value);
+    const payload = {
+      source: 'contact',
+      name: fd.get('name'),
+      phone: fd.get('phone'),
+      email: fd.get('email'),
+      categories,
+      message: fd.get('message')
+    };
+    await postToWebhook(payload, contactForm.querySelector('button[type="submit"]'), contactForm);
+  });
+}
+
+const smarterForm = document.getElementById('smarter-form');
+if (smarterForm) {
+  smarterForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const fd = new FormData(smarterForm);
+    fd.append('source', 'smarter');
+    const btn = smarterForm.querySelector('button[type="submit"]');
+    const orig = btn.textContent;
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(WEBHOOK_URL, { method: 'POST', body: fd });
+      const data = await res.json();
+      const ok = Array.isArray(data) ? data[0]?.success === true : data?.success === true;
+      if (!ok) throw new Error();
+      btn.textContent = '✓ Enviado';
+      btn.style.background = '#1BB9A5';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+        smarterForm.reset();
+      }, 3000);
+    } catch {
+      btn.textContent = 'Error, reintenta';
+      btn.style.background = '#e74c3c';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+      }, 3000);
+    }
+  });
+}
+
+/* ─── Newsletter feedback (visual only) ─── */
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = newsletterForm.querySelector('button[type="submit"]');
+    if (!btn) return;
+    const origHTML = btn.innerHTML;
+    btn.innerHTML = '✓';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = origHTML;
+      btn.disabled = false;
+      newsletterForm.reset();
     }, 3000);
   });
-});
+}
 
 /* ─── WhatsApp bubble ─── */
 (function () {

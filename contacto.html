@@ -67,34 +67,34 @@
               <div class="field-row">
                 <div class="field">
                   <label class="label">Nombre</label>
-                  <input type="text" class="input" placeholder="Tu nombre" />
+                  <input type="text" name="name" class="input" placeholder="Tu nombre" />
                 </div>
                 <div class="field">
                   <label class="label">Número</label>
-                  <input type="tel" class="input" placeholder="+56 9 XXXX XXXX" />
+                  <input type="tel" name="phone" class="input" placeholder="+56 9 XXXX XXXX" />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Correo electrónico</label>
-                <input type="email" class="input" placeholder="tu@empresa.com" />
+                <input type="email" name="email" class="input" placeholder="tu@empresa.com" />
               </div>
 
               <div class="field">
                 <label class="label">¿En qué podemos ayudarte?</label>
                 <div class="checkbox-grid">
-                  <label class="chip"><input type="checkbox" id="chip-cloud"     hidden /><span>Migración Cloud</span></label>
-                  <label class="chip"><input type="checkbox" hidden /><span>Automatización</span></label>
-                  <label class="chip"><input type="checkbox" hidden /><span>Desarrollo</span></label>
-                  <label class="chip"><input type="checkbox" id="chip-staffing" hidden /><span>Staffing</span></label>
-                  <label class="chip"><input type="checkbox" hidden /><span>Consultoría TI</span></label>
-                  <label class="chip"><input type="checkbox" hidden /><span>Otro</span></label>
+                  <label class="chip"><input type="checkbox" name="categories" value="Migración Cloud" id="chip-cloud"     hidden /><span>Migración Cloud</span></label>
+                  <label class="chip"><input type="checkbox" name="categories" value="Automatización" hidden /><span>Automatización</span></label>
+                  <label class="chip"><input type="checkbox" name="categories" value="Desarrollo" hidden /><span>Desarrollo</span></label>
+                  <label class="chip"><input type="checkbox" name="categories" value="Staffing" id="chip-staffing" hidden /><span>Staffing</span></label>
+                  <label class="chip"><input type="checkbox" name="categories" value="Consultoría TI" hidden /><span>Consultoría TI</span></label>
+                  <label class="chip"><input type="checkbox" name="categories" value="Otro" hidden /><span>Otro</span></label>
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Mensaje</label>
-                <textarea class="input textarea" placeholder="Cuéntanos sobre tu proyecto…"></textarea>
+                <textarea name="message" class="input textarea" placeholder="Cuéntanos sobre tu proyecto…"></textarea>
               </div>
 
               <button type="submit" class="btn-orange btn-full">Enviar mensaje</button>
