@@ -157,6 +157,38 @@
   </section>
 
 
+  <!-- ══ MISIÓN Y VISIÓN ══ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal text-center">NUESTRA ESENCIA</h2>
+      <div class="mv-grid">
+
+        <div class="mv-card reveal">
+          <div class="mv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28">
+              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+            </svg>
+          </div>
+          <h3 class="mv-card__label">MISIÓN</h3>
+          <div class="mv-card__rule"></div>
+          <p class="mv-card__text">Buscamos agregar valor al negocio de nuestros clientes, entregando soluciones ajustadas a cada necesidad. Trabajamos comprometidos en impulsar el crecimiento de tu empresa a través de nuestros servicios tecnológicos ágiles y eficientes.</p>
+        </div>
+
+        <div class="mv-card reveal" style="--delay:120ms">
+          <div class="mv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 class="mv-card__label">VISIÓN</h3>
+          <div class="mv-card__rule"></div>
+          <p class="mv-card__text">Ser reconocidos como una empresa de servicios TI líder en América, acompañando a nuestros clientes a construir un futuro mejor de la mano de la tecnología.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ══ NUESTRA RED DE IMPACTO — Figma y=2921 ══ -->
   <section class="section">
     <div class="container">
@@ -273,6 +305,37 @@
     </div>
 
   </footer>
+
+  <!-- ══ WHATSAPP BUBBLE ══ -->
+  <div class="wa-bubble" id="wa-bubble">
+    <div class="wa-popup" id="wa-popup" hidden>
+      <div class="wa-popup__header">
+        <div class="wa-popup__avatar">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.06L2 22l4.94-1.38A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.46-4.56-1.26l-.32-.2-3.32.87.87-3.32-.2-.32A7.93 7.93 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.32-6.12c-.24-.12-1.4-.69-1.62-.77-.21-.08-.37-.12-.52.12-.16.24-.6.77-.74.93-.14.16-.27.18-.51.06-.24-.12-1-.37-1.9-1.18-.7-.63-1.17-1.4-1.31-1.64-.14-.24-.01-.37.1-.49.11-.11.24-.27.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.26-.71-1.72-.19-.46-.38-.4-.52-.4-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.21.24-.83.81-.83 1.97 0 1.16.85 2.28.97 2.44.12.16 1.67 2.55 4.05 3.58.57.24 1.01.39 1.35.5.57.18 1.08.15 1.49.09.45-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28z"/></svg>
+        </div>
+        <div class="wa-popup__info">
+          <p class="wa-popup__name">SmartJob</p>
+          <p class="wa-popup__status">En línea</p>
+        </div>
+        <button class="wa-popup__close" id="wa-close" aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="wa-popup__body">
+        <div class="wa-popup__bubble">
+          <p class="wa-popup__title">Conversemos</p>
+          <p class="wa-popup__text">El equipo suele responder en unos minutos.</p>
+        </div>
+      </div>
+      <div class="wa-popup__footer">
+        <a href="https://wa.me/56957689050" target="_blank" rel="noopener" class="wa-popup__cta">Iniciar chat</a>
+      </div>
+    </div>
+    <button class="wa-btn" id="wa-toggle" aria-label="Chat por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.06L2 22l4.94-1.38A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.46-4.56-1.26l-.32-.2-3.32.87.87-3.32-.2-.32A7.93 7.93 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.32-6.12c-.24-.12-1.4-.69-1.62-.77-.21-.08-.37-.12-.52.12-.16.24-.6.77-.74.93-.14.16-.27.18-.51.06-.24-.12-1-.37-1.9-1.18-.7-.63-1.17-1.4-1.31-1.64-.14-.24-.01-.37.1-.49.11-.11.24-.27.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.26-.71-1.72-.19-.46-.38-.4-.52-.4-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.21.24-.83.81-.83 1.97 0 1.16.85 2.28.97 2.44.12.16 1.67 2.55 4.05 3.58.57.24 1.01.39 1.35.5.57.18 1.08.15 1.49.09.45-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28z"/></svg>
+      <span class="wa-btn__label">¿Necesitas ayuda?</span>
+    </button>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

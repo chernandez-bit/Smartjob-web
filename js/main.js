@@ -106,3 +106,28 @@ sections.forEach(s => activeObs.observe(s));
     }, 3000);
   });
 });
+
+/* ─── WhatsApp bubble ─── */
+(function () {
+  const toggle = document.getElementById('wa-toggle');
+  const close  = document.getElementById('wa-close');
+  const popup  = document.getElementById('wa-popup');
+  if (!toggle || !popup) return;
+
+  toggle.addEventListener('click', () => {
+    const open = popup.hasAttribute('hidden');
+    if (open) popup.removeAttribute('hidden');
+    else popup.setAttribute('hidden', '');
+  });
+
+  if (close) {
+    close.addEventListener('click', () => popup.setAttribute('hidden', ''));
+  }
+
+  document.addEventListener('click', e => {
+    const bubble = document.getElementById('wa-bubble');
+    if (bubble && !bubble.contains(e.target)) {
+      popup.setAttribute('hidden', '');
+    }
+  });
+})();
