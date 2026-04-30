@@ -2217,6 +2217,15 @@ form { display: flex; flex-direction: column; gap: 16px; }
   width: 100%;
   height: auto;
 }
+.svc-hcard__wordmark-text {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--dark);
+  text-align: center;
+  max-width: 130px;
+}
 
 /* Íconos mostrados cerca de su resolución nativa para evitar pixelación */
 .svc-hcard__icon {
