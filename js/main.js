@@ -75,6 +75,17 @@ const activeObs = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => activeObs.observe(s));
 
+/* ─── Contact form preselector ─── */
+(function () {
+  const s = new URLSearchParams(window.location.search).get('s');
+  if (!s) return;
+  const map = { staffing: 'chip-staffing', cloud: 'chip-cloud' };
+  const id = map[s];
+  if (!id) return;
+  const cb = document.getElementById(id);
+  if (cb) cb.checked = true;
+})();
+
 /* ─── Form feedback ─── */
 ['smarter-form', 'contact-form', 'newsletter-form'].forEach(id => {
   const form = document.getElementById(id);
