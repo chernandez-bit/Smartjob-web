@@ -976,6 +976,8 @@ ul { list-style: none; }
   transition: border-color .2s, background .2s;
 }
 .smarter-file-label:hover { border-color: var(--orange); background: rgba(249,156,8,.04); }
+.smarter-file-label.has-file { border-style: solid; border-color: var(--orange); color: var(--dark); }
+.smarter-file-label.has-file svg { stroke: var(--orange); }
 .smarter-file { position: absolute; opacity: 0; width: 0; height: 0; }
 .smarter-file-text { flex: 1; }
 

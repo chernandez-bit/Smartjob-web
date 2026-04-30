@@ -150,6 +150,23 @@ if (contactForm) {
   });
 }
 
+/* ─── File input feedback ─── */
+const fileInput = document.querySelector('.smarter-file');
+if (fileInput) {
+  const fileLabel = fileInput.closest('.smarter-file-label');
+  const fileText  = fileLabel.querySelector('.smarter-file-text');
+  const defaultText = fileText.textContent;
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length > 0) {
+      fileText.textContent = fileInput.files[0].name;
+      fileLabel.classList.add('has-file');
+    } else {
+      fileText.textContent = defaultText;
+      fileLabel.classList.remove('has-file');
+    }
+  });
+}
+
 const smarterForm = document.getElementById('smarter-form');
 if (smarterForm) {
   smarterForm.addEventListener('submit', async e => {
@@ -172,6 +189,11 @@ if (smarterForm) {
         btn.disabled = false;
         btn.style.background = '';
         smarterForm.reset();
+        if (fileInput) {
+          const fl = fileInput.closest('.smarter-file-label');
+          fl.classList.remove('has-file');
+          fl.querySelector('.smarter-file-text').textContent = 'Selecciona tu archivo PDF o Word';
+        }
       }, 3000);
     } catch {
       btn.textContent = 'Error, reintenta';
