@@ -249,3 +249,18 @@ if (newsletterForm) {
     }
   });
 })();
+
+/* ─── Filtro ofertas de empleo ─── */
+(function () {
+  const search = document.getElementById('empleos-search');
+  const grid   = document.getElementById('empleos-grid');
+  if (!search || !grid) return;
+
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    grid.querySelectorAll('.empleo-card').forEach(card => {
+      const title = card.querySelector('.empleo-card__title')?.textContent.toLowerCase() ?? '';
+      card.classList.toggle('hidden', q !== '' && !title.includes(q));
+    });
+  });
+})();

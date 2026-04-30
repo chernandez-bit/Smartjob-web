@@ -266,7 +266,7 @@ ul { list-style: none; }
 ══════════════════════════════════════════════════════════ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 78vh;
   background: #fff;
   overflow: hidden;
   display: flex;
@@ -301,39 +301,39 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   margin-left: 46.9%;
-  padding: 130px 52px 64px 48px;
+  padding: 80px 52px 48px 48px;
   max-width: 760px;
 }
 
 /* Orange rule: w=540, h=5 */
 .hero-rule {
-  width: 540px;
+  width: 400px;
   max-width: 100%;
-  height: 5px;
+  height: 4px;
   background: var(--orange);
   border-radius: 2px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 /* Headline: Host Grotesk ExtraBold 800, 48px, uppercase */
 .hero-h1 {
   font-family: 'Host Grotesk', sans-serif;
   font-weight: 800;
-  font-size: clamp(32px, 3.33vw, 48px);
+  font-size: clamp(26px, 2.6vw, 38px);
   line-height: 1.1;
   color: var(--dark);
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 /* Sub: Host Grotesk Regular 400, 24px */
 .hero-sub {
   font-family: 'Host Grotesk', sans-serif;
   font-weight: 400;
-  font-size: clamp(16px, 1.67vw, 24px);
+  font-size: clamp(14px, 1.2vw, 17px);
   color: var(--dark);
   line-height: 1.5;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 /* Down-arrow indicator */
@@ -723,6 +723,11 @@ ul { list-style: none; }
   .mv-grid { grid-template-columns: 1fr; }
 }
 
+/* Variantes teal para páginas Smart Staffing */
+.section-title--teal   { color: var(--teal); }
+.mv-card__icon--teal   { background: rgba(27,185,165,.10); color: var(--teal); }
+.mv-card__rule--teal   { background: var(--teal); }
+
 .partners-card {
   display: flex;
   min-height: 392px;
@@ -996,12 +1001,36 @@ ul { list-style: none; }
   padding-block: clamp(48px, 6vw, 80px);
   background: var(--offwhite);
 }
+.empleos-filter {
+  margin-top: 28px;
+}
+.empleos-search-input {
+  width: 100%;
+  max-width: 480px;
+  display: block;
+  padding: 12px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--dark);
+  background: #fff;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.empleos-search-input::placeholder { color: #aaa; }
+.empleos-search-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249,156,8,.12);
+}
+
 .empleos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 32px;
+  margin-top: 20px;
 }
+.empleo-card.hidden { display: none; }
 .empleo-card {
   background: #fff;
   border: 1.5px solid var(--border);
@@ -1853,7 +1882,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 .svc-page-wordmark {
   width: 100%;
-  max-width: 260px;
+  max-width: clamp(280px, 42vw, 560px);
   height: auto;
 }
 .svc-page-accent {
@@ -1887,9 +1916,89 @@ form { display: flex; flex-direction: column; gap: 16px; }
 .btn-teal:hover { background: #19a797; transform: translateY(-2px); }
 .svc-breadcrumb--dark { color: var(--dark); opacity: .7; }
 
+/* ══ Two-column hero + benefit cards panel ══ */
+.svc-page-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  align-items: center;
+  gap: clamp(28px, 4vw, 56px);
+  padding-bottom: clamp(48px, 6vw, 88px);
+}
+.svc-page-hero-text {
+  align-items: flex-start;
+  text-align: left;
+}
+.svc-page-hero-text .svc-breadcrumb { align-self: flex-start; }
+.svc-page-hero-text .btn-teal,
+.svc-page-hero-text .btn-orange { align-self: flex-start; }
+
+/* Benefit cards 2×2 grid */
+.svc-benefits-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.svc-benefit-card {
+  border-radius: 22px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.svc-benefit-card__icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.svc-benefit-card__title {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Staffing — teal (usa var(--teal) del proyecto) */
+.svc-benefit-card--teal-solid {
+  background: var(--teal);
+  color: #fff;
+}
+.svc-benefit-card--teal-solid .svc-benefit-card__title { color: #fff; }
+
+.svc-benefit-card--teal-light {
+  background: rgba(27,185,165,.12);
+  color: var(--teal);
+}
+.svc-benefit-card--teal-light .svc-benefit-card__title { color: var(--dark); }
+
+/* Cloud — orange (usa var(--orange) del proyecto) */
+.svc-benefit-card--orange-solid {
+  background: var(--orange);
+  color: #fff;
+}
+.svc-benefit-card--orange-solid .svc-benefit-card__title { color: #fff; }
+
+.svc-benefit-card--orange-light {
+  background: rgba(249,156,8,.12);
+  color: var(--orange);
+}
+.svc-benefit-card--orange-light .svc-benefit-card__title { color: var(--dark); }
+
+/* Los iconos heredan el color de la card via currentColor */
+.svc-benefit-card__icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
 /* Responsive — svc-page-hero */
 @media (max-width: 900px) {
   .svc-page-card-bg { width: 40%; opacity: .6; }
+  .svc-page-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .svc-page-hero-text { align-items: center; text-align: center; max-width: 520px; margin-inline: auto; }
+  .svc-page-hero-text .btn-teal,
+  .svc-page-hero-text .btn-orange { align-self: center; }
+  .svc-benefits-panel { max-width: 480px; margin-inline: auto; }
 }
 @media (max-width: 768px) {
   .svc-page-hero    { min-height: unset; padding-top: 100px; padding-bottom: 48px; }
@@ -1898,6 +2007,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 @media (max-width: 480px) {
   .svc-page-wordmark { max-width: 220px; }
+  .svc-benefit-card__title { font-size: 12px; }
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -2309,6 +2419,55 @@ form { display: flex; flex-direction: column; gap: 16px; }
 
 @media (max-width: 600px) {
   .svc-benefits-img { border-radius: 14px; }
+}
+
+/* ══ ROLES GRID ══════════════════════════════════════════════ */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.role-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  transition: transform .22s cubic-bezier(.16,1,.3,1), box-shadow .22s;
+}
+.role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.09);
+}
+.role-card__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(27,185,165,.10);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.role-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.role-card__desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .roles-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .roles-grid { grid-template-columns: 1fr; }
 }
 
 /* ══ WHATSAPP BUBBLE ══════════════════════════════════════════ */

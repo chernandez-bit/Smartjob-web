@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Se Smarter — Trabaja con Smartjob</title>
+  <title>Sé Smarter — Trabaja con Smartjob</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
       <ul class="nav-links">
         <li><a href="index.html#quienes" class="nav-a">Quiénes somos</a></li>
         <li><a href="servicios.html"       class="nav-a">Nuestros Servicios</a></li>
-        <li><a href="se-smarter.html"     class="nav-a fw-700 c-orange">Se Smarter</a></li>
+        <li><a href="se-smarter.html"     class="nav-a fw-700 c-orange">Sé Smarter</a></li>
         <li><a href="contacto.html"        class="btn-orange">Contacto</a></li>
       </ul>
       <button class="hamburger" id="menu-toggle" aria-label="Menú">
@@ -33,12 +33,12 @@
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="index.html#quienes"  class="mobile-a">Quiénes somos</a>
     <a href="servicios.html"       class="mobile-a">Nuestros Servicios</a>
-    <a href="se-smarter.html"     class="mobile-a c-orange fw-700">Se Smarter</a>
+    <a href="se-smarter.html"     class="mobile-a c-orange fw-700">Sé Smarter</a>
     <a href="contacto.html"        class="mobile-a c-orange fw-700">Contacto</a>
   </div>
 
   <!-- ══ SE SMARTER MAIN ══════════════════════════════════════
-       Figma: 188:73 — Se Smarter (1440×1265)
+       Figma: 188:73 — Sé Smarter (1440×1265)
        Fondo blanco + wave decoration
        Card centrada: x=255, y=216, w=932, h=548
        bg: rgba(248,248,248,0.8), border-radius: 30px
@@ -63,6 +63,12 @@
            fill: rgba(248,248,248,0.8), r=30px, shadow=0 4px 4px rgba(0,0,0,0.25) -->
       <div class="smarter-card reveal">
         <form id="smarter-form">
+
+          <!-- Input 0: Nombre y Apellido -->
+          <div class="smarter-field">
+            <label class="smarter-label"><span class="c-orange fw-700">Nombre y Apellido</span></label>
+            <input type="text" name="fullname" class="smarter-input" placeholder="Tu nombre completo" required />
+          </div>
 
           <!-- Input 1: Especialidad — y=423, w=634, h=64 -->
           <div class="smarter-field">
@@ -104,7 +110,12 @@
     <div class="container">
       <h2 class="section-title reveal">OFERTAS <span class="c-orange">DISPONIBLES</span></h2>
       <div class="orange-rule reveal"></div>
-      <div class="empleos-grid">
+
+      <div class="empleos-filter reveal">
+        <input type="text" id="empleos-search" class="empleos-search-input" placeholder="Buscar por cargo…" autocomplete="off" />
+      </div>
+
+      <div class="empleos-grid" id="empleos-grid">
 
         <div class="empleo-card reveal">
           <div class="empleo-card__header">
@@ -112,7 +123,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Ingeniero de Software</h3>
-          <p class="empleo-card__location">📍 Santiago, Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/2ADB2CF5DE" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -122,7 +132,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Gestor de Infraestructura</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/5AAA34898C" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -132,7 +141,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">IA Specialist en Santiago</h3>
-          <p class="empleo-card__location">📍 Santiago, Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/8BB218AFAD" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -142,7 +150,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Project Manager Experiencia Clientes Senior Corp</h3>
-          <p class="empleo-card__location">📍 Santiago, Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/E9B54D6BBD" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -152,7 +159,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">DevOps / SRE Engineer (Senior – Expert Level)</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/39FE947F25" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -162,7 +168,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Jefe de Proyectos</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/AD4382818C" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -172,7 +177,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Product Manager Ecommerce Sell Out</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/417B53DDA2" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -182,7 +186,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Fullstack Developer Semi Senior</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/8525BDB6F2" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -192,7 +195,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Data Analyst</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/D58B8ABA12" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -202,7 +204,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Technical Lead con Inglés Avanzado</h3>
-          <p class="empleo-card__location">📍 Santiago, Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/A67DA52A09" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -212,7 +213,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Product Specialist Junior</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/C04FD227FD" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -222,7 +222,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Desarrollador Fullstack (Angular + Node) Semi Senior</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/ED36A3171D" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -232,7 +231,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Desarrollador iOS Senior Experto</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/85289A36B8" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -242,7 +240,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Jefe de Proyectos Senior</h3>
-          <p class="empleo-card__location">📍 Santiago, Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/FE5779DEE5" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -252,7 +249,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Full Stack Cloud (Senior)</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/8D286E636A" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -262,7 +258,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">UX Designer Senior</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/EC33FB0DB8" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -272,7 +267,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">DevOps Senior GCP</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/ED3AAB4887" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -282,7 +276,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Data Analyst</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/901EEF9647" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -292,7 +285,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Asistente de R&amp;S y D.O.</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/D6A1A79AFC" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -302,7 +294,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Desarrollador Frontend Latam</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/EA1D659FEF" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -312,7 +303,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Ingeniero QA Sr/Ssr</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/E152F1E44D" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -322,7 +312,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Desarrollador iOS + Inglés</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/B26D9B201F" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -332,7 +321,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Desarrollador Android + Inglés</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/41F9E92FC5" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -342,7 +330,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Diseñador UX/UI Sr</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/DC02F2A588" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -352,7 +339,6 @@
             <span class="empleo-badge">Nuevo</span>
           </div>
           <h3 class="empleo-card__title">Android Developer</h3>
-          <p class="empleo-card__location">📍 Chile</p>
           <a href="https://ats.rankmi.com/tenants/8/job_offer/71AA41348B" target="_blank" rel="noopener" class="empleo-card__btn">Ver oferta</a>
         </div>
 
@@ -378,12 +364,6 @@
         <!-- Contáctanos + email -->
         <div class="fv2-actions">
           <a href="contacto.html" class="fv2-btn-contacta">Contáctanos</a>
-          <form class="fv2-email-form" id="newsletter-form">
-            <input type="email" placeholder="Ingresa tu email" />
-            <button type="submit" aria-label="Enviar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
-            </button>
-          </form>
         </div>
 
       </div>
@@ -397,7 +377,7 @@
       <nav class="fv2-nav">
         <a href="index.html#quienes">Quiénes somos</a>
         <a href="servicios.html">Nuestros Servicios</a>
-        <a href="se-smarter.html">Se Smarter</a>
+        <a href="se-smarter.html">Sé Smarter</a>
         <a href="contacto.html">Contacto</a>
       </nav>
 
