@@ -1854,6 +1854,44 @@ form { display: flex; flex-direction: column; gap: 16px; }
 [style*="--delay"] { transition-delay: var(--delay, 0ms); }
 
 /* ══════════════════════════════════════════════════════════
+   ANIMACIONES
+══════════════════════════════════════════════════════════ */
+
+/* 1 — Hero entrance: más lento y con delay para sentirse premium */
+.hero .hero-content {
+  transition: opacity 1.1s 150ms cubic-bezier(.16, 1, .3, 1),
+              transform 1.1s 150ms cubic-bezier(.16, 1, .3, 1);
+}
+
+/* 2 — Stagger en cards de servicios (servicios.html) */
+.svc-cards-stack .svc-hcard:nth-child(2) { transition-delay: 200ms; }
+.svc-cards-stack .svc-hcard:nth-child(3) { transition-delay: 400ms; }
+
+/* 2b — Stagger en cards de empleos: cada fila de 3 entra escalonada */
+.empleos-grid .empleo-card:nth-child(3n+2) { transition-delay: 80ms; }
+.empleos-grid .empleo-card:nth-child(3n+3) { transition-delay: 160ms; }
+
+/* 3 — Hover en tech pills */
+.tech-pill {
+  transition: transform .22s cubic-bezier(.16, 1, .3, 1),
+              box-shadow .22s cubic-bezier(.16, 1, .3, 1);
+}
+.tech-pill:hover {
+  transform: scale(1.10);
+  box-shadow: 0 8px 24px rgba(249,156,8,.45);
+}
+
+/* 4 — Hover en svc-hcards */
+.svc-hcard {
+  transition: transform .25s cubic-bezier(.16, 1, .3, 1),
+              box-shadow .25s cubic-bezier(.16, 1, .3, 1);
+}
+.svc-hcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.13);
+}
+
+/* ══════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════ */
 @media (max-width: 1200px) {
