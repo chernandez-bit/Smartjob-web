@@ -40,15 +40,18 @@ ul { list-style: none; }
   margin-inline: auto;
   padding-inline: 52px;
 }
+@media (max-width: 1024px) {
+  .container { padding-inline: 36px; }
+}
 @media (max-width: 768px) {
   .container { padding-inline: 20px; }
 }
 
 /* ─── Section ─── */
-.section { padding-block: 56px; }
+.section { padding-block: clamp(40px, 5vw, 72px); }
 .section--offwhite { background: var(--offwhite); }
-.section--partners { padding-block: 60px; }
-.section--conectemos { padding-block: 60px; }
+.section--partners { padding-block: clamp(36px, 4vw, 60px); }
+.section--conectemos { padding-block: clamp(36px, 4vw, 60px); }
 
 /* ─── Orange rule ─── */
 .orange-rule {
@@ -370,7 +373,7 @@ ul { list-style: none; }
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 20px;
-  padding: 40px 52px;
+  padding: clamp(24px, 2.8vw, 40px) clamp(24px, 3.6vw, 52px);
 }
 .page-hero-content .hero-h1 { margin-bottom: 16px; }
 .page-hero-content .hero-sub { margin-bottom: 0; }
@@ -389,7 +392,7 @@ ul { list-style: none; }
 .stat-num {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: clamp(52px, 6.25vw, 90px);
+  font-size: clamp(36px, 6.25vw, 90px);
   color: var(--orange);
   line-height: 1;
   margin-bottom: 12px;
@@ -409,8 +412,8 @@ ul { list-style: none; }
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 48px;
+  gap: clamp(16px, 2.8vw, 40px);
+  margin-top: clamp(28px, 3.3vw, 48px);
 }
 .svc-card {
   border: 1px solid var(--orange);
@@ -439,7 +442,7 @@ ul { list-style: none; }
 .svc-name {
   font-family: 'Host Grotesk', sans-serif;
   font-weight: 800;
-  font-size: 28px;
+  font-size: clamp(20px, 2vw, 28px);
   line-height: 1.15;
   color: var(--dark);
 }
@@ -1156,15 +1159,15 @@ form { display: flex; flex-direction: column; gap: 16px; }
 .fv2-divider {
   height: 1px;
   background: #C8C8C8;
-  margin: 0 52px;
+  margin: 0 clamp(20px, 3.6vw, 52px);
 }
 
 /* ── Bottom: nav | síguenos | oficinas ── */
 .fv2-bottom {
   display: grid;
-  grid-template-columns: 220px 160px 1fr;
-  gap: 40px;
-  padding: 32px 0 36px;
+  grid-template-columns: 200px 140px 1fr;
+  gap: clamp(24px, 2.8vw, 40px);
+  padding: clamp(24px, 2.5vw, 32px) 0 clamp(28px, 2.5vw, 36px);
   align-items: start;
 }
 
@@ -1172,6 +1175,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding-left: 24px;
 }
 .fv2-nav a {
   font-size: 14px;
@@ -1612,8 +1616,8 @@ form { display: flex; flex-direction: column; gap: 16px; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom: 56px;
+  padding-top: clamp(90px, 8.3vw, 120px);
+  padding-bottom: clamp(32px, 3.9vw, 56px);
 }
 .svc-page-wave {
   display: block;
@@ -1739,6 +1743,11 @@ form { display: flex; flex-direction: column; gap: 16px; }
   .process-arrow    { display: none; }
 }
 
+@media (max-width: 1024px) {
+  .hero-content { margin-left: 44%; }
+  .svc-hcard { grid-template-columns: 160px 1fr; }
+}
+
 @media (max-width: 1100px) {
   .hero-content { margin-left: 42%; }
   .cards-grid { gap: 24px; }
@@ -1781,7 +1790,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
   .hero-wave--teal   { left: -30%; width: 150%; opacity: .65; }
   .hero-content {
     margin-left: 0;
-    padding: 120px 20px 60px;
+    padding: 96px 20px 48px;
     background: rgba(255,255,255,.55);
     max-width: 100%;
   }
@@ -1816,18 +1825,20 @@ form { display: flex; flex-direction: column; gap: 16px; }
 }
 
 @media (max-width: 480px) {
-  .stats-grid    { grid-template-columns: 1fr; }
+  .stats-grid    { grid-template-columns: 1fr 1fr; }
   .field-row     { grid-template-columns: 1fr; }
   .cards-grid    { grid-template-columns: 1fr; max-width: 100%; }
   .benefits-grid    { grid-template-columns: 1fr; }
   .benefit-img-grid { grid-template-columns: 1fr; }
-  .smarter-page, .contacto-page { padding-block: 100px 48px; }
-  .section-title { font-size: 26px; }
-  .conectemos-card { padding: 32px 20px; }
-  .conectemos-icon { width: 60px; height: 60px; }
-  .service-title { font-size: 22px; }
-  .partners-h2   { font-size: 18px; }
+  .smarter-page, .contacto-page { padding-block: 88px 40px; }
+  .section-title { font-size: 24px; }
+  .conectemos-card { padding: 28px 20px; }
+  .conectemos-icon { width: 52px; height: 52px; }
+  .service-title { font-size: 20px; }
+  .partners-h2   { font-size: 17px; }
   .continent-img { max-width: 100%; }
+  .tech-pill, .tech-logo-pill { height: 52px; width: 110px; border-radius: 14px; }
+  .tech-pill img { height: 26px; max-width: 78px; }
 }
 
 
@@ -1886,7 +1897,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 36px 52px;
+  padding: clamp(24px, 2.5vw, 36px) clamp(28px, 3.6vw, 52px);
 }
 .svc-hcard__right--orange { background: var(--orange); }
 .svc-hcard__right--teal   { background: var(--teal); }
@@ -1981,40 +1992,49 @@ form { display: flex; flex-direction: column; gap: 16px; }
    FOOTER V2 — Responsive
 ══════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
+  .fv2-bottom { grid-template-columns: 180px 120px 1fr; gap: 24px; }
   .fv2-offices { gap: 12px; }
-  .fv2-office  { min-width: 120px; }
-  .fv2-email-form input { width: 170px; }
+  .fv2-office  { min-width: 110px; }
+  .fv2-email-form input { width: 160px; }
 }
 
 @media (max-width: 768px) {
-  /* Top: logo arriba, acciones abajo en una sola fila */
-  .fv2-top-inner  { flex-direction: column; align-items: stretch; gap: 16px; }
-  .fv2-actions    { flex-direction: row; align-items: center; flex-wrap: nowrap; gap: 8px; }
+  /* Top: logo arriba, acciones abajo */
+  .fv2-top-inner { flex-direction: column; align-items: stretch; gap: 16px; }
+  .fv2-actions   { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 8px; }
 
-  /* Email form: ocupa el espacio restante, input se estira */
+  /* Email form estira para llenar el espacio */
   .fv2-email-form       { flex: 1; min-width: 0; }
   .fv2-email-form input { flex: 1; width: auto; min-width: 0; }
 
-  /* Divisor */
-  .fv2-divider { margin: 0 20px; }
-
-  /* Bottom: nav y síguenos en 2 cols, oficinas abajo */
-  .fv2-bottom  { grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px 0 28px; }
+  /* Bottom: nav y síguenos lado a lado, oficinas abajo a todo el ancho */
+  .fv2-bottom {
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    padding: 24px 0 28px;
+  }
   .fv2-offices {
     grid-column: 1 / -1;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 20px;
   }
-  .fv2-office { min-width: 130px; flex: 1 1 130px; }
+  .fv2-office { min-width: 120px; flex: 1 1 120px; }
+
+  /* Íconos sociales en fila */
+  .fv2-social { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .fv2-siguenos { width: 100%; }
 }
 
 @media (max-width: 480px) {
-  /* Bottom: una columna, todo apilado */
-  .fv2-bottom  { grid-template-columns: 1fr; gap: 20px; }
-  /* Oficinas: dos por fila o una dependiendo del ancho */
+  /* Todo en columna única */
+  .fv2-bottom { grid-template-columns: 1fr; gap: 20px; }
+  /* Botón contacta ocupa ancho completo */
+  .fv2-btn-contacta { width: 100%; justify-content: center; }
+  /* Oficinas: 2 por fila */
   .fv2-offices { gap: 16px; }
-  .fv2-office  { min-width: 140px; }
+  .fv2-office  { min-width: calc(50% - 8px); flex: 1 1 calc(50% - 8px); }
+  .fv2-flag    { width: 40px; }
 }
 
 /* Responsive */
@@ -2031,11 +2051,11 @@ form { display: flex; flex-direction: column; gap: 16px; }
   }
   .svc-hcard__wordmark { max-width: 110px; }
   .svc-hcard__icon     { max-width: 56px; }
-  .svc-hcard__right    { padding: 32px 28px; }
+  .svc-hcard__right    { padding: 24px 20px; }
   .svc-hcard__btn      { align-self: flex-start; }
-  .tech-logo-pill { height: 60px; }
-  .tech-pill      { height: 60px; padding: 0 16px; }
-  .tech-pill img  { height: 34px; }
+  .tech-logo-pill { height: 60px; width: 130px; }
+  .tech-pill      { height: 60px; width: 130px; }
+  .tech-pill img  { height: 32px; max-width: 96px; }
 }
 
 @media (max-width: 768px) {
