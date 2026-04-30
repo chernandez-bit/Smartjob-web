@@ -931,6 +931,93 @@ ul { list-style: none; }
 }
 
 /* ══════════════════════════════════════════════════════════
+   EMPLEOS SECTION — Se Smarter
+══════════════════════════════════════════════════════════ */
+.empleos-section {
+  padding-block: clamp(48px, 6vw, 80px);
+  background: var(--offwhite);
+}
+.empleos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+.empleo-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+  transition: transform .2s, box-shadow .2s;
+}
+.empleo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.10);
+}
+.empleo-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.empleo-card__icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.empleo-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: .04em;
+}
+.empleo-card__title {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.35;
+  flex: 1;
+}
+.empleo-card__location {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+.empleo-card__btn {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 8px 20px;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  border-radius: 100px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background .2s, color .2s;
+}
+.empleo-card__btn:hover {
+  background: var(--orange);
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .empleos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .empleos-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════════════════
    CONTACTO PAGE — 188:75 (1440×1370)
 ══════════════════════════════════════════════════════════ */
 .contacto-page {
