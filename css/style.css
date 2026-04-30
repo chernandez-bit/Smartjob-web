@@ -62,6 +62,16 @@ ul { list-style: none; }
   border-radius: 2px;
   margin-block: 20px 24px;
 }
+.section-header-center {
+  text-align: center;
+}
+.section-header-center .orange-rule {
+  margin-inline: auto;
+}
+.section-header-center .body-text {
+  max-width: 680px;
+  margin-inline: auto;
+}
 
 /* ─── Section title: Host Grotesk ExtraBold 800 48px ─── */
 .section-title {
@@ -1748,7 +1758,7 @@ form { display: flex; flex-direction: column; gap: 16px; }
 
 @media (max-width: 1024px) {
   .hero-content { margin-left: 44%; }
-  .svc-hcard { grid-template-columns: 160px 1fr; }
+  .svc-cards-stack { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 1100px) {
@@ -1851,15 +1861,14 @@ form { display: flex; flex-direction: column; gap: 16px; }
 
 /* Stack of 3 full-width horizontal cards */
 .svc-cards-stack {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
 .svc-hcard {
-  display: grid;
-  grid-template-columns: 195px 1fr;
-  min-height: 220px;
+  display: flex;
+  flex-direction: column;
   border-radius: 30px;
   border: 1.5px solid var(--orange);
   box-shadow: 0 4px 20px rgba(0,0,0,0.10);
@@ -1900,18 +1909,18 @@ form { display: flex; flex-direction: column; gap: 16px; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(24px, 2.5vw, 36px) clamp(28px, 3.6vw, 52px);
+  padding: clamp(20px, 2vw, 28px) clamp(20px, 2vw, 28px);
+  flex: 1;
 }
 .svc-hcard__right--orange { background: var(--orange); }
 .svc-hcard__right--teal   { background: var(--teal); }
 
 .svc-hcard__text {
   font-family: 'Host Grotesk', sans-serif;
-  font-size: clamp(16px, 1.5vw, 22px);
+  font-size: clamp(15px, 1.3vw, 19px);
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.45;
   color: #fff;
-  max-width: 580px;
 }
 
 .svc-hcard__btn {
@@ -2042,12 +2051,9 @@ form { display: flex; flex-direction: column; gap: 16px; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .svc-hcard {
-    grid-template-columns: 1fr;
-    min-height: unset;
-  }
+  .svc-cards-stack { grid-template-columns: 1fr; }
   .svc-hcard__left {
-    padding: 28px 24px;
+    padding: 24px;
     flex-direction: row;
     gap: 16px;
     border-bottom: 1.5px solid rgba(0,0,0,0.06);
