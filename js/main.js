@@ -131,6 +131,13 @@ if (contactForm) {
     const fd = new FormData(contactForm);
     const categories = [...contactForm.querySelectorAll('input[name="categories"]:checked')]
       .map(cb => cb.value);
+    if (categories.length === 0) {
+      const grid = contactForm.querySelector('.checkbox-grid');
+      grid.style.outline = '2px solid #e74c3c';
+      grid.style.borderRadius = '8px';
+      setTimeout(() => { grid.style.outline = ''; }, 3000);
+      return;
+    }
     const payload = {
       source: 'contact',
       name: fd.get('name'),
